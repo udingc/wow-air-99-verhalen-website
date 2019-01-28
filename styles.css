@@ -1,0 +1,584 @@
+body {
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #2b4040;
+    font-family: museo-sans, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1em;
+    line-height: 1.42857143;
+    margin: 0em;
+    padding: 0.9375em 0.9375em 0.9375em 0.9375em;
+    overflow-x: hidden;
+}
+
+/* navigatie */
+
+header {
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
+header img {
+    max-width: 4.125em;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-content: space-between;
+    position: relative;
+}
+
+header nav:after {
+    border-bottom: solid #A6C4C4 0.0625em;
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    z-index: -1;
+}
+
+header nav ul {
+    align-content: space-between;
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    padding: inherit;
+}
+
+header nav ul li {
+    color: #2b4040;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 0.7em;
+    padding: 0.5em;
+}
+
+header nav ul li:hover {
+    color: #99258D;
+    font-weight: 300;
+}
+
+header nav ul li a {
+    color: #99258D;
+    text-decoration: none;
+    padding: 0.25em;
+}
+
+/* zoek een verhaal kolom */
+
+form {
+    background-color: #fafafa;
+    border: solid 0.0625em #A6C4C4;
+    padding: 0.429em;
+    margin-bottom: 2.5em;
+}
+
+form h3 {
+    padding-top: 0.9375em;
+    text-align: center;
+    color: #99258D;
+}
+
+form fieldset {
+    text-transform: uppercase;
+    border: none;
+}
+
+form > fieldset {
+    opacity: 0;
+    height: 0;
+    transition: all .4s ease-in-out;
+}
+
+form fieldset legend {
+    border-bottom: 0.0625em solid #FFDF5D;
+    font-weight: 700;
+    padding-top: 0.3125em;
+}
+
+form a {
+    text-transform: uppercase;
+    background-color: #99258D;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    line-height: 2em;
+    border-radius: 0.333em;
+    padding: 0.5em 0.9375em 0.5em 0.9375em;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 0.625em 0.4375em 0em 0.4375em;
+    float: right;
+}
+
+form a:hover {
+    background: #6D105C;
+}
+
+form > label {
+    border: solid 0.0625em;
+    background-color: #99258D;
+    color: white;
+    font-size: 1.15em;
+    font-weight: 300;
+    width: 100%;
+    display: flex;
+}
+
+form > label i:first-child {
+    background-color: #99258D;
+    margin-right: 0.625em;
+    margin-top: 0.281em;
+    margin-left: 0.625em;
+    font-size: 0.9em;
+
+}
+
+form > label i:last-child {
+    background-color: #99258D;
+    margin-right: 0.625em;
+    margin-top: 0.281em;
+    font-size: 1em;
+    margin-left: auto;
+}
+
+form fieldset label:nth-child(n+2) {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.625em;
+    color: rgba(153, 37, 141, 1);
+    margin-right: 0.625em;
+    margin-left: -1em;
+}
+
+form fieldset label:nth-child(n+2):hover {
+    background: rgba(239, 192, 48, 0.4);
+    padding: 0.375em 0.625em;
+    border-radius: 0.625em;
+}
+
+form fieldset input[type="radio"]:focus + label,
+form fieldset input[type="radio"]:checked + label {
+    background: rgba(239, 192, 48, 1);
+    padding: 0.375em 0.625em;
+    border-radius: 0.625em;
+    color: #2B4040;
+}
+
+form fieldset input {
+    opacity: 0;
+}
+
+form > input {
+    position: absolute;
+    left: -62.4375em;
+}
+
+.filteren ~ fieldset {
+    transform: translateY(-2rem);
+    pointer-events: none;
+    transition: all 0.7s;
+}
+
+.filteren.active,
+.filteren.active i {
+    background: #6D105C;
+}
+
+
+.filteren.active ~ fieldset {
+    display: block;
+    opacity: 1;
+    height: 100%;
+    transform: translateY(0.25em);
+    pointer-events: auto;
+}
+
+.filteren {
+    overflow: hidden;
+}
+
+.filteren i:nth-of-type(2) {
+    transition: all 1s;
+}
+
+.filteren.active i:nth-of-type(2) {
+    transform: rotate(180deg) translateY(0.3rem);
+}
+
+/* de verhalen */
+
+article {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    border: solid 0.0625em;
+    border-color: #A6C4C4;
+    margin-top: 1.25em;
+    margin-bottom: 0.75em;
+}
+
+article a {
+    grid-column: 1 / 4;
+    grid-row: 1/ 3;
+}
+
+article a img {
+    max-width: 100%;
+}
+
+article h3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0 1rem;
+    padding-left: 0.9375em;
+    margin-top: 0.3125em;
+    margin-bottom: 0em;
+    font-weight: 100;
+    padding-left: 1em;
+}
+
+article footer p {
+    padding-left: 1em;
+    margin-top: 0em;
+    margin-bottom: 0.3125em;
+    font-weight: 100;
+    font-size: 0.7em;
+}
+
+article > button {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-bottom: 1.25em;
+    margin-right: 0.625em;
+    border: none;
+    background-color: #99258D;
+    color: white;
+    text-transform: uppercase;
+    width: 10em;
+    line-height: 2em;
+    border-radius: 0.1875em;
+    padding: 0 1em;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+article > button:hover {
+    background-color: #6D105C;
+}
+
+article footer button:nth-child(2) {
+    border: none;
+    color: #2b4040;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 100;
+    width: 10em;
+    background: white;
+}
+
+article footer button:nth-child(3) {
+    border: none;
+    color: #2b4040;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 100;
+    width: 10em;
+    background: white;
+}
+
+article footer button:nth-child(2):hover {
+    color: #99258D;
+}
+
+article footer button:nth-child(3):hover {
+    color: #99258D;
+}
+
+article footer button i {
+    display: block !important;
+    /* important want font-aweseome wil inline blocken*/
+}
+
+article footer {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    place-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem .5rem;
+}
+
+article button {
+    text-transform: uppercase;
+}
+
+article button i {
+    color: #99258D;
+}
+
+/* 99 verhalen beschikbaar text*/
+
+section {
+    display: flex;
+}
+
+section h5 {
+    margin: 0 auto;
+    display: inline-flex;
+    text-align: center;
+    border-bottom: 0.125em solid #FFDF5D;
+}
+
+/* footer */
+
+body > footer {
+    margin: -1.4375em;
+    background: #F4EEE8;
+    padding-bottom: 1em;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    padding-top: 1em;
+    margin-top: 1.25em;
+}
+
+body > footer p:first-of-type {
+    margin-top: 2.5em;
+    font-size: 0.88em;
+    font-weight: 300;
+    text-align: center;
+}
+
+body > footer p:last-of-type {
+    color: #99258D;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+body > footer ul {
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+    padding: inherit;
+    margin: 0em;
+}
+
+body > footer ul li a {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: #d0c9c2;
+}
+
+/* paranoia html styles */
+
+#para section {
+    display: block;
+    padding: 1.25em;
+    background-color: #99258D;
+    margin-bottom: 1.5em;
+}
+
+#para section h3 {
+    color: white;
+    font-weight: 300;
+    padding-bottom: 0.625em;
+    text-align: center;
+}
+
+#para section footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#para section footer button {
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 100;
+    width: 10em;
+    background: #99258D;
+}
+
+#para section footer button:hover,
+#para section footer button i:hover {
+    color: #A6C4C4;
+}
+
+#para section footer button i {
+    display: block !important;
+    color: white;
+    /* important want font-aweseome wil inline blocken*/
+}
+
+#para embed {
+    width: 100%;
+    height: 46.875em;
+}
+
+/* javascript download */
+
+nav ul li:nth-of-type(2) {
+    position: relative;
+}
+
+nav ul li:nth-of-type(2) p {
+    position: absolute;
+    left: 5.5rem;
+    top: -0.9375em;
+    display: none;
+    background-color: #A6C4C4;
+    border-radius: 50%;
+    padding-left: 0.3125em;
+    padding-bottom: 0.25em;
+    height: 0.75em;
+    width: 0.75em;
+    font-weight: 500;
+}
+
+nav ul li:nth-of-type(2) p.aan {
+    display: block;
+}
+
+
+/* popup */
+
+#popup {
+    display: block;
+    background: #A6C4C4;
+    color: 2B4040;
+    text-align: center;
+    position: fixed;
+    width: 30rem;
+    height: 6rem;
+    left: calc(50% - 15rem);
+    bottom: 0;
+    transition: .3s ease-out all;
+    opacity: 1;
+
+}
+
+#popup.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(1rem) scale(.95);
+}
+
+#popup button {
+    text-transform: uppercase;
+    background-color: #99258D;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    line-height: 2em;
+    border-radius: 0.125em;
+    padding: 0.5em 0.9375em 0.5em 0.9375em;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 0.625em 0.4375em 0em 0.4375em;
+}
+
+/* breakpoint naar tablet */
+
+@media (min-width: 48em) {
+    main.index {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    header nav ul li {
+        font-size: 1em;
+    }
+
+    nav ul li:nth-of-type(2) p {
+        position: absolute;
+        left: 8.2rem;
+        top: -1.25em;
+        display: none;
+        background-color: #A6C4C4;
+        border-radius: 50%;
+        padding-left: 0.3125em;
+        padding-bottom: 0.25em;
+        height: 0.9375em;
+        width: 0.9375em;
+        font-weight: 500;
+    }
+
+    #para section footer button {
+        font-size: 0.9em;
+    }
+
+}
+
+
+/* breakpoint naar desktop */
+
+#heroBanner div {
+    display: none;
+}
+
+@media (min-width: 61em) {
+    #heroBanner {
+        background-image: url('pictures/banner.jpeg');
+        background-size: cover;
+        height: 24rem;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.75rem;
+        padding-bottom: 0;
+    }
+
+    .filteren.active i:nth-of-type(2) {
+        display: none;
+    }
+
+    #heroBanner form {
+        width: 30rem;
+        height: 110%;
+    }
+
+    #heroBanner form fieldset {
+        height: auto;
+    }
+
+    #heroBanner div {
+        color: white;
+        display: block;
+        padding-left: 1.25em;
+    }
+
+    main.index {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    body {
+        border: solid 0.5em #99258D;
+    }
+
+    header img {
+        max-width: 5em;
+    }
+
+    header nav ul li {
+        padding-bottom: 1em;
+    }
+
+    section h5 {
+        margin-top: 4.375em;
+    }
+}

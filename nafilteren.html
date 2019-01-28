@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>99 verhalen WOW air</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wxm4kct.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html" title="WOW air">
+                <img src="pictures/wow_air_logo.png" alt="">
+            </a>
+            <ul>
+                <li><a href="" title="Mijn Lijst" class="fas fa-plus"></a>mijn lijst</li>
+                <li>
+                    <section class="notification"></section>
+                    <a href="" title="Mijn Downloads" class="fas fa-download"></a>downloads</li>
+                <li><a href="inloggen.html" title="Inloggen" class="fas fa-sign-in-alt"></a>uitloggen</li>
+            </ul>
+        </nav>
+
+        <div id="heroBanner">
+            <form>
+                <h3>Zoek een verhaal</h3>
+                <input type="checkbox" id="filteren">
+                <label class="filteren" for="filteren"><i class="fas fa-filter"></i><span>Filteren</span><i class="fas fa-angle-down"></i></label>
+
+                <fieldset>
+                    <legend>Sorteer op</legend>
+                    <input type="radio" id="aanbevolen" name="groep_1"><label for="aanbevolen">aanbevolen</label>
+                    <input type="radio" id="populair" name="groep_1"><label for="populair">populair</label>
+                    <input type="radio" id="verhaal_kort-lang" name="groep_1"><label for="verhaal_kort-lang">verhaal kort-lang</label>
+                    <input type="radio" id="verhaal_lang-kort" name="groep_1"><label for="verhaal_lang-kort">verhaal lang-kort</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Filter op</legend>
+                    <fieldset>
+                        <legend>Genre</legend>
+                        <input type="radio" id="humor" name="groep_2"><label for="humor">humor</label>
+                        <input type="radio" id="spanning" name="groep_2"><label for="spanning">spanning</label>
+                        <input type="radio" id="sensatie" name="groep_2"><label for="sensatie">sensatie</label>
+                        <input type="radio" id="overige" name="groep_2"><label for="overige">overige</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Leesduur</legend>
+                        <input type="radio" id="0_5min" name="groep_3"><label for="0_5min">0-5 min</label>
+                        <input type="radio" id="5_10min" name="groep_3"><label for="5_10min">5-10 min</label>
+                        <input type="radio" id="10_15min" name="groep_3"><label for="10_15min">10-15 min</label>
+                    </fieldset>
+                    <a href="index.html">Zoeken</a>
+                </fieldset>
+            </form>
+            <div>
+                <h1>WOW AIR - 99 verhalen website</h1>
+                <p>Psst! Ja, jij! <br><br> Ben je opzoek naar amusement voor, tijdens en na uw WOW-vlucht? <br><br> Dan ben je op het juiste adres! <br><br> Vindt hier 99 vermakelijke verhalen om je WOW-reis mee door te komen!</p>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h5>2 verhalen beschikbaar</h5>
+    </section>
+
+    <main class='index'>
+        <article>
+            <a href=""><img src="pictures/droom.jpg" alt=""></a>
+            <button>Lees meer</button>
+            <h3>Droom</h3>
+            <footer>
+                <p>Leesduur: 0-5 min | Genre: Humor</p>
+                <button class="togglePopup"><i class="fas fa-plus togglePopup"></i>mijn lijst</button>
+                <button class="dlButton"><i class="fas fa-download"></i>download</button>
+            </footer>
+        </article>
+
+        <article>
+            <a href=""><img src="pictures/mop.png" alt=""></a>
+            <button>Lees meer</button>
+            <h3>Mop</h3>
+            <footer>
+                <p>Leesduur: 5-10 min | Genre: Humor </p>
+                <button class="togglePopup"><i class="fas fa-plus togglePopup"></i>mijn lijst</button>
+                <button class="dlButton"><i class="fas fa-download"></i>download</button>
+            </footer>
+        </article>
+
+        <!-- popup -->
+        <div id="popup" class="hidden">
+            <span>Psst.. het verhaal is terug te vinden in je 'MIJN LIJST'</span>
+            <br>
+            <button class="togglePopup">sluiten</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>WOW air - Katrínatún 4 - 105 Reykjavík - Kt. 451011-0220 - Vsknr. 109354</p>
+        <p>Neem contact met ons op</p>
+        <ul>
+            <li><a href="https://nl-nl.facebook.com/wowiceland/" class="fab fa-facebook-f"></a></li>
+            <li><a href="https://www.twitter.com/wow_air" class="fab fa-twitter"></a></li>
+            <li><a href="https://www.instagram.com/wowair/" class="fab fa-instagram"></a></li>
+            <li><a href="https://pinterest.com/wowair/" class="fab fa-pinterest-p"></a></li>
+            <li><a href="https://www.youtube.com/user/WOWairTV" class="fab fa-youtube"></a></li>
+            <li><a href="https://www.tripadvisor.com/Airlines-WW-WOW-air" class="fab fa-tripadvisor"></a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
